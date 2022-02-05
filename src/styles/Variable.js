@@ -1,11 +1,13 @@
 export const fontFamily = {
-    system: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+    system: '"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+    appleSystem: '-apple-system, BlinkMacSystemFont',
     notoSans: 'Noto Sans KR',
     gilroyR: 'Gilroy Regular',
     gilroyB: 'Gilroy ExtraBold',
 };
 
-export const colors = {
+export const color = {
+    bg: '#FAF8FF',
     brand400: '#7687F5',
     brand500: '#5E67EB',
     blue100: '#EEF3FB',    
@@ -25,12 +27,13 @@ export const colors = {
     midnight100: 'rgba(42, 47, 61, 0.08)',
 };
 
-export const breakPoints = {
+export const breakPoint = {
     tablet: 1175, // 이하
     mobile: 767, // 이하
 };
 
 export const mediaQuery = {
-    mediaTablet: `@media (max-width: ${breakPoints.tablet}px) and (min-width: ${breakPoints.mobile + 1}px)`,
-    mediaMobile: `@media (max-width: ${breakPoints.mobile}px)`,
+    mediaDesktop: `@media (min-width: ${breakPoint.tablet + 1}px)`,
+    mediaTablet: `@media (max-width: ${breakPoint.tablet}px) and (min-width: ${breakPoint.mobile + 1}px)`,
+    mediaMobile: `@media (max-width: ${breakPoint.mobile}px)`,
 };

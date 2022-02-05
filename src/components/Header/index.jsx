@@ -21,7 +21,7 @@ const Header = () => {
         <Headers className={scrollY > 0 ? 'on' : ''}>
             <Inners>
                 <div className='header-logo'>
-                    <img src={scrollY > 0 ? img_cc_logotype_brand : img_cc_logotype} alt="커피챗 로고" />
+                    <img src={scrollY > 0 ? img_cc_logotype_brand : img_cc_logotype} alt='커피챗 로고' />
                 </div>
             </Inners>
         </Headers>

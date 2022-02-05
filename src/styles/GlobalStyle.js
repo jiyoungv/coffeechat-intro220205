@@ -1,9 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-import { fontFamily } from './Variable';
-import { hidden, fontBold } from './Mixin';
+import { mediaQuery, fontFamily, color } from './Variable';
+import { hidden } from './Mixin';
 
-const { system, gilroyR, notoSans } = fontFamily;
+const { mediaMobile } = mediaQuery;
+const { system, appleSystem, notoSans } = fontFamily;
+const { midnight700 } = color;
 
 const GlobalStyle = createGlobalStyle`
 	${reset}
@@ -18,13 +20,13 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
 		font-size: 16px;
-		font-family: ${gilroyR}, ${notoSans}, ${system};
+		font-family: ${appleSystem}, ${notoSans}, ${system};
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;		
 		font-weight: 400;
 		line-height: 1.6;
 		letter-spacing: -0.03em;
-		color: #000;
+		color: ${midnight700};
 		word-break: keep-all;
 	}
 
@@ -65,15 +67,22 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	strong, b {
-		${fontBold}
+		font-weight: 700;
 	}
 	
 	img {
 		max-width: 100%;
+		display: block;
 	}
 
 	.hidden {
 		${hidden};
+	}
+
+	${mediaMobile} {
+		body {
+			letter-spacing: -0.02em;
+		}
 	}
 `;
 
