@@ -1,8 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import { fontFamily } from './Variable';
+import { hidden, fontBold } from './Mixin';
 
-const { notoSans } = fontFamily;
+const { system, gilroyR, notoSans } = fontFamily;
 
 const GlobalStyle = createGlobalStyle`
 	${reset}
@@ -17,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
 		font-size: 16px;
-		font-family: ${notoSans}, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+		font-family: ${gilroyR}, ${notoSans}, ${system};
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;		
 		font-weight: 400;
@@ -64,20 +65,15 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	strong, b {
-		font-weight: 700;
-
-		&.bolder {
-			font-weight: 900;
-		}
+		${fontBold}
 	}
 	
 	img {
 		max-width: 100%;
 	}
 
-	#root {
-		overflow-x: hidden;
-		
+	.hidden {
+		${hidden};
 	}
 `;
 

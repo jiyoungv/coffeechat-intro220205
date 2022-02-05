@@ -1,15 +1,15 @@
 import React from 'react';
 import { Inners } from '../../styles/Common';
-import { Faqs } from './Style';
+import { Shorts } from './Style';
 
-const Faq = () => {
+const Short = () => {
     return (
-        <Faqs>
+        <Shorts>
             <Inners>
-                Faq
+                Short
             </Inners>
-        </Faqs>
+        </Shorts>
     );
 };
 
-export default Faq;
+export default Short;

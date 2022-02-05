@@ -1,15 +1,15 @@
 import React from 'react';
 import { Inners } from '../../styles/Common';
-import { Faqs } from './Style';
+import { Intros } from './Style';
 
-const Faq = () => {
+const Intro = () => {
     return (
-        <Faqs>
+        <Intros>
             <Inners>
-                Faq
+                Intro
             </Inners>
-        </Faqs>
+        </Intros>
     );
 };
 
-export default Faq;
+export default Intro;
