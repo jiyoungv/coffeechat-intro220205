@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy'),
+        url('./assets/fonts/Gilroy-Regular.otf') format('opentype')
+}
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Gilroy'),
+        url('./assets/fonts/Gilroy-ExtraBold.otf') format('opentype')
+}
