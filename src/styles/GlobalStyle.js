@@ -3,7 +3,7 @@ import reset from 'styled-reset';
 import { mediaQuery, fontFamily, color } from './Variable';
 import { hidden } from './Mixin';
 
-const { mediaMobile } = mediaQuery;
+const { mediaTablet, mediaMobile } = mediaQuery;
 const { system, appleSystem, notoSans } = fontFamily;
 const { midnight700 } = color;
 
@@ -79,9 +79,31 @@ const GlobalStyle = createGlobalStyle`
 		${hidden};
 	}
 
+	br.none-desktop {
+		display: none;
+	}
+
+	${mediaTablet} {
+		br.none-desktop {
+			display: block;
+		}
+
+		br.none-tablet {
+			display: none;
+		}
+	}
+
 	${mediaMobile} {
 		body {
 			letter-spacing: -0.02em;
+		}
+
+		br.none-desktop {
+			display: block;
+		}
+
+		br.none-mobile {
+			display: none;
 		}
 	}
 `;

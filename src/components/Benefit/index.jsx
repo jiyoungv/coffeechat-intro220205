@@ -30,7 +30,7 @@ const Benefit = () => {
                             </h2>
                         }
                     </div>
-                    <Buttons typeColor={'#fff'} className='benefix-btn'>
+                    <Buttons typeColor={'#fff'} className='benefit-btn'>
                         <a href='/' title='지금 바로 혜택 받기'>지금 바로 혜택 받기</a>
                     </Buttons>
                 </article>

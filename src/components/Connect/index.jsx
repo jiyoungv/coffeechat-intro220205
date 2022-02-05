@@ -19,7 +19,7 @@ const Connect = () => {
                             커피챗으로 경험하세요.                            
                         </h2>
                     </div>
-                    <div className='connect-btn-group'>
+                    <div className='connect-btn-wrap'>
                         <a href='/' title='Google Play' className='connect-btn'>Google Play</a>
                         <a href='/' title='App Store' className='connect-btn type-apple'>App Store</a>
                     </div>

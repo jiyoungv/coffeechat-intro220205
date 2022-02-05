@@ -6,7 +6,9 @@ const Howto = () => {
     return (
         <Howtos>
             <Inners>
-                Howto
+                <div className='howto-tit'>
+                    <h2>커피챗 이용방법.</h2>
+                </div>
             </Inners>
         </Howtos>
     );

@@ -15,4 +15,9 @@ export const hidden = css`
     opacity: 0;
     width: 1px;
     height: 1px;
+    visibility: hidden;
+`;
+
+export const aColor = `
+    &, &:active, &:visited
 `;

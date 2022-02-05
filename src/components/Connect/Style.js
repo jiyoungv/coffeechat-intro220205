@@ -21,7 +21,7 @@ export const Connects = styled.section`
         }
     }
 
-    .connect-btn-group {
+    .connect-btn-wrap {
         display: flex;
         justify-content: center;
         align-items: center;

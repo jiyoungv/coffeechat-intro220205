@@ -38,7 +38,7 @@ export const Benefits = styled.section`
             }
         }
 
-        .benefix-btn {
+        .benefit-btn {
             text-align: center;
         }
     }
@@ -61,7 +61,7 @@ export const Benefits = styled.section`
             }
         }
 
-        .benefix-btn {
+        .benefit-btn {
             text-align: center;
         }        
     }

@@ -9,14 +9,13 @@ export const Headers = styled.header`
     top: 0;
     left: 0;
     width: 100%;
-    height: 72px;
+    height: 80px;
     transition: background 0.3s, box-shadow 0.3s;
 
     .header-logo {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
     &.on {
@@ -25,6 +24,7 @@ export const Headers = styled.header`
     }
 
     ${mediaTablet} {
+        height: 72px;
     }
     
     ${mediaMobile} {

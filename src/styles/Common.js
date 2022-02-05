@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { mediaQuery, color } from './Variable';
-import { clearFix } from './Mixin';
+import { clearFix, aColor } from './Mixin';
 
 const { mediaDesktop, mediaTablet, mediaMobile } = mediaQuery;
 const { midnight700, brand400 } = color;
@@ -14,7 +14,8 @@ export const Inners = styled.div`
     ${clearFix}
 
     ${mediaTablet} {
-        margin: 0 48px;
+        max-width: calc(740px + 48px * 2);
+        padding: 0 48px;
     }
 
     ${mediaMobile} {
@@ -34,7 +35,15 @@ export const Buttons = styled.div`
         letter-spacing: -0.02em;
         text-align: center;
         
-        ${props => props.typeColor && `border-color: ${props.typeColor}; color: ${props.typeColor}`};
+        ${props => props.typeColor && `
+            border-color: ${props.typeColor};
+        `};
+
+        ${aColor} {
+            ${props => props.typeColor && `
+                color: ${props.typeColor};
+            `};            
+        }
     }
 
     ${mediaDesktop} {
@@ -56,6 +65,7 @@ export const Buttons = styled.div`
         a, button {
             min-width: 0;
             padding: 12.5px 15px;
+            border-radius: 4px;
             font-size: 13px;
         }
     }
