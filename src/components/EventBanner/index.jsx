@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { EventBanners } from './Style';
 import eb_coupon from '../../assets/images/eb_coupon.png';
+import useScroll from '../../hooks/useScroll';
 
-const EventBanner = () => {
+const EventBanner = ({ isMobile }) => {
+    const [show, setShow] = useState(true);
+    const [scrollY] = useScroll();
+
+    const onClose = useCallback(() => {
+        setShow(false);
+    }, []);
+
+    useEffect(() => {
+        if (!isMobile) {
+            if (scrollY > 100) {
+                setShow(false);
+            } else if (scrollY === 0) {
+                setShow(true);
+            }
+        }
+    }, [isMobile, scrollY]);
+
     return (
-        <EventBanners>
+        <EventBanners className={show ? 'on' : ''}>
             <article className='eb-content'>
                 <div className='eb-txt'>
                     <h3>
@@ -20,10 +38,10 @@ const EventBanner = () => {
                     <a href='/' title='지금 바로 혜택 받기' className='eb-btn'>지금 바로 혜택 받기</a>
                 </div>
                 <div className='eb-btn-wrap'>
-                    <button type='button' title='나중에 받기' className='eb-btn2'>나중에 받기</button>
+                    <button type='button' title='나중에 받기' className='eb-btn2' onClick={onClose}>나중에 받기</button>
                 </div>
             </article>
-            <button type='button' className='eb-close' title='배너 닫기'>
+            <button type='button' className='eb-close' title='배너 닫기' onClick={onClose}>
                 <span className='hidden'>배너 닫기</span>
             </button>
         </EventBanners>

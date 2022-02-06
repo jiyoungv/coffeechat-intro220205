@@ -1,21 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Inners } from '../../styles/Common';
 import { Headers } from './Style';
 import img_cc_logotype from '../../assets/images/img_cc_logotype.svg';
 import img_cc_logotype_brand from '../../assets/images/img_cc_logotype_brand.svg';
+import useScroll from '../../hooks/useScroll';
 
 const Header = () => {
-    const [scrollY, setScrollY] = useState(0);
-
-    const handleNavigation = (e) => {
-        const window = e.currentTarget;
-        setScrollY(window.pageYOffset);
-    };
-
-    useEffect(() => {
-        setScrollY(window.pageYOffset);
-        window.addEventListener('scroll', (e) => handleNavigation(e));
-    }, []);
+    const [scrollY] = useScroll();
 
     return (
         <Headers className={scrollY > 0 ? 'on' : ''}>

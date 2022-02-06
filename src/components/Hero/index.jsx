@@ -2,6 +2,7 @@ import React from 'react';
 import { Inners } from '../../styles/Common';
 import { Heros } from './Style';
 import EventBanner from '../EventBanner';
+import { IsMobile } from '../../utils/mediaQuery';
 
 const Hero = () => {
     return (
@@ -23,7 +24,7 @@ const Hero = () => {
                         커리어 대화 연결 플랫폼 커피챗
                     </h3>
                 </div>
-                <EventBanner />
+                <EventBanner isMobile={IsMobile()} />
             </Inners>
         </Heros>
     );

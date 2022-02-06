@@ -47,7 +47,7 @@ export const Heros = styled.section`
     ${mediaMobile} {
         height: auto;
         padding: 48px 0 40px;
-        background: url(${hero_bg_mobile}) top 40% right/cover no-repeat;
+        background: url(${hero_bg_mobile}) top 20% right/cover no-repeat;
         
         .hero-txt {
             margin-top: 32px;

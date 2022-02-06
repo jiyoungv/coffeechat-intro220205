@@ -19,7 +19,7 @@ const Review = () => {
                         return (
                             <li 
                                 key={review.id} 
-                                className={review.type ? `review-list-item type${review.type}` : 'review-list-item'}
+                                className={`review-list-item ${review.type && `type${review.type}`}`}
                             >
                                 <div className='review-list-chip'>
                                     <i>{review.company}</i>

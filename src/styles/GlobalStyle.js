@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import reset from 'styled-reset';
 import { mediaQuery, fontFamily, color } from './Variable';
 import { hidden } from './Mixin';
@@ -7,8 +7,23 @@ const { mediaTablet, mediaMobile } = mediaQuery;
 const { system, appleSystem, notoSans } = fontFamily;
 const { midnight700 } = color;
 
+function transDelay(length, duration) {
+	let styles = '';
+  
+	for (let i = 1; i < length; i++) {
+	   	styles += `
+			.trans-delay${i} {
+				transition-delay: ${(duration * i).toFixed(1)}s;
+			}
+	   `
+	}
+  
+	return css`${styles}`;
+}
+  
 const GlobalStyle = createGlobalStyle`
 	${reset}
+	${transDelay(5, 0.3)};
 	
 	* {
 		box-sizing: border-box;

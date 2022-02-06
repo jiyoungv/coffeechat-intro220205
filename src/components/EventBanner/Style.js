@@ -3,18 +3,26 @@ import { mediaQuery } from '../../styles/Variable';
 import { aColor } from '../../styles/Mixin';
 import eb_close from '../../assets/images/eb_close.png';
 
-const { mediaTablet, mediaMobile } = mediaQuery;
+const { mediaDesktop, mediaTablet, mediaMobile } = mediaQuery;
 
 export const EventBanners = styled.section`
     z-index: 10;
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
-    top: 552px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     width: 589px;
     height: 212px;      
     padding: 32px;    
     border-radius: 8px;
     background: #000;
+    transition: 1s;
+
+    &.on {
+        opacity: 1;
+        visibility: visible;
+    }
 
     .eb-content {
     }
@@ -44,6 +52,7 @@ export const EventBanners = styled.section`
         border-radius: 4px;
         font-size: 13px;
         letter-spacing: -0.02em;
+        transition: background 0.3s, color 0.3s;
         
         ${aColor} {
             color: #fff;
@@ -51,7 +60,7 @@ export const EventBanners = styled.section`
     }
 
     .eb-btn2 {
-        diplay: none;
+        display: none;
     }
 
     .eb-close {
@@ -64,6 +73,14 @@ export const EventBanners = styled.section`
         background: url(${eb_close}) center/100% auto no-repeat;
     }
 
+    ${mediaDesktop} {
+        .eb-btn {
+            &:hover {
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
 
     ${mediaTablet} {
         top: auto;
@@ -71,12 +88,17 @@ export const EventBanners = styled.section`
     }
 
     ${mediaMobile} {
+        display: none;
         position: static;
         width: auto;
         max-width: 272px;
         height: auto;
         margin: 40px auto 0;
         padding: 24px;
+
+        &.on {
+            display: block;
+        }
 
         .eb-txt {
             margin-bottom: 16px;
@@ -98,7 +120,7 @@ export const EventBanners = styled.section`
         }
 
         .eb-btn2 {
-            diplay: inline-block;
+            display: inline-block;
             margin-top: 16px;
             color: #fff;
             font-size: 11px;

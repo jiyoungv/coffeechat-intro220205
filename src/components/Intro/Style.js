@@ -30,18 +30,39 @@ export const Intros = styled.section`
     intro-list {
     }
 
+    @keyframes intro-ani {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .intro-list-item {
         display: flex;
         align-items: center;
+        opacity: 0;
+        transform: translateY(50px);        
         margin-bottom: 10px;
         padding: 40px;
         border-radius: 8px;
         background: radial-gradient(229.59% 96.04% at 50% 3.96%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%);
         box-shadow: -22px 44px 88px rgba(221, 221, 221, 0.25);
         backdrop-filter: blur(55px);
+        transition-property: all;
+        transition-duration: 0.5s;
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &.on {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         h3 {
