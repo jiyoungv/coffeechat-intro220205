@@ -10,15 +10,15 @@ const Intro = () => {
     const [on, setOn] = useState(false); // 스크롤 애니메이션 상태
 
     useEffect(() => {
+        if (scrollY <= 0) return;
+
         const el = scrollRef.current;
         const elPosY = scrollY + el.getBoundingClientRect().top;
         const elHeight = el.offsetHeight;
         const clientH = document.documentElement.clientHeight;
         const result = Math.floor(elPosY + elHeight - clientH);
 
-        if (scrollY > 0) {
-            setPointY(result);
-        }
+        setPointY(result);
     }, [scrollY, pointY]);
 
     useEffect(() => {
