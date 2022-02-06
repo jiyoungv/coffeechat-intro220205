@@ -48,7 +48,8 @@ export const Intros = styled.section`
         opacity: 0;
         transform: translateY(50px);        
         margin-bottom: 10px;
-        padding: 40px;
+        padding: 38px;
+        border: 2px solid #f9fafd;
         border-radius: 8px;
         background: radial-gradient(229.59% 96.04% at 50% 3.96%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%);
         box-shadow: -22px 44px 88px rgba(221, 221, 221, 0.25);
@@ -125,7 +126,7 @@ export const Intros = styled.section`
 
         .intro-list-item {
             display: block;
-            padding: 24px;
+            padding: 22px;
             margin-bottom: 8px;
 
             h3 {
