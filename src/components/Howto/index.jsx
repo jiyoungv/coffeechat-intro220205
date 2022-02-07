@@ -15,7 +15,7 @@ const Howto = () => {
                 <article className='howto-content'>
                     {IsDesktop() && <HowtoBall />}
                     <div className='howto-list'>
-                        <div className='howto-list-wall'></div>
+                        {IsDesktop() && <div className='howto-list-wall'></div>}
                         <HowtoSlide isDesktop={IsDesktop()} />
                     </div>
                 </article>
