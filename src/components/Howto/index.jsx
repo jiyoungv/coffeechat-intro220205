@@ -13,7 +13,7 @@ const Howto = () => {
                     <h2>커피챗 이용방법.</h2>
                 </div>
                 <article className='howto-content'>
-                    <HowtoBall />
+                    {IsDesktop() && <HowtoBall />}
                     <div className='howto-list'>
                         <div className='howto-list-wall'></div>
                         <HowtoSlide isDesktop={IsDesktop()} />

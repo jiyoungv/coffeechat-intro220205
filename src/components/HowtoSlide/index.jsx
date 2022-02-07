@@ -9,7 +9,6 @@ import { Scrollbar, Mousewheel } from "swiper";
 import { HowtoSlides } from './Style';
 import howtoData from '../../data/howtoData';
 import { IsMobile } from '../../utils/mediaQuery';
-// import { breakPoint } from '../../styles/Variable';
 
 const HowtoSlide = () => {
     const howtoList = howtoData.map((v, i) => {
