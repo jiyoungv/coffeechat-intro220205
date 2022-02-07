@@ -31,7 +31,7 @@ const Benefit = () => {
                         }
                     </div>
                     <Buttons typeColor={'#fff'} className='benefit-btn'>
-                        <a href='/' title='지금 바로 혜택 받기'>지금 바로 혜택 받기</a>
+                        <a href='https://www.coffeechat.kr/event' target='_blank' rel='noreferrer' title='지금 바로 혜택 받기'>지금 바로 혜택 받기</a>
                     </Buttons>
                 </article>
             </Inners>

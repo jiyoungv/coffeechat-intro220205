@@ -34,7 +34,7 @@ const Review = () => {
                     })}
                 </ul>
                 <Buttons className='review-btn'>
-                    <a href='/' title='커피챗 실시간 리뷰 더 보러 가기'>커피챗 실시간 리뷰 더 보러 가기</a>
+                    <a href='https://www.coffeechat.kr/reviewAll' target='_blank' rel='noreferrer' title='커피챗 실시간 리뷰 더 보러 가기'>커피챗 실시간 리뷰 더 보러 가기</a>
                 </Buttons>
             </Inners>
         </Reviews>

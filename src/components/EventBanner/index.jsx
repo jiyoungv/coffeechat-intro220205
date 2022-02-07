@@ -36,7 +36,7 @@ const EventBanner = ({ isMobile }) => {
                     <img src={eb_coupon} alt='' />
                 </figure>
                 <div className='eb-btn-wrap'>
-                    <a href='/' title='지금 바로 혜택 받기' className='eb-btn'>지금 바로 혜택 받기</a>
+                    <a href='https://www.coffeechat.kr/event' target='_blank' rel='noreferrer' title='지금 바로 혜택 받기' className='eb-btn'>지금 바로 혜택 받기</a>
                 </div>
                 <div className='eb-btn-wrap'>
                     <button type='button' title='나중에 받기' className='eb-btn2' onClick={onClose}>나중에 받기</button>
