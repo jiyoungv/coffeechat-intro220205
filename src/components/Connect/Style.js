@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import { mediaQuery } from '../../styles/Variable';
+import { mediaQuery, color } from '../../styles/Variable';
 import connect_bg from '../../assets/images/connect_bg.png';
 import connect_google from '../../assets/images/connect_google.png';
 import connect_apple from '../../assets/images/connect_apple.png';
 
-const { mediaTablet, mediaMobile } = mediaQuery;
+const { mediaDesktop, mediaTablet, mediaMobile } = mediaQuery;
+const { brand500 } = color;
 
 export const Connects = styled.section`
     padding: 160px 0;
@@ -54,6 +55,17 @@ export const Connects = styled.section`
             &::before {
                 background-image: url(${connect_apple});
             }            
+        }
+    }
+
+    ${mediaDesktop} {
+        .connect-btn {
+            transition: all 0.3s;
+
+            &:hover {
+                border-color: ${brand500};
+                background: ${brand500};
+            }
         }
     }
 

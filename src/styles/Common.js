@@ -3,7 +3,7 @@ import { mediaQuery, color } from './Variable';
 import { clearFix, aColor } from './Mixin';
 
 const { mediaDesktop, mediaTablet, mediaMobile } = mediaQuery;
-const { midnight700, brand400 } = color;
+const { midnight700, brand500 } = color;
 
 export const Inners = styled.div`
     position: relative;
@@ -51,8 +51,8 @@ export const Buttons = styled.div`
             transition: all 0.3s;
             
             &:hover {
-                border-color: ${brand400};
-                background: ${brand400};
+                border-color: ${brand500};
+                background: ${brand500};
                 color: #fff;
             }
         }

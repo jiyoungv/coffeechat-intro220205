@@ -15,7 +15,8 @@ const HowtoSlide = () => {
     const howtoList = howtoData.map((v, i) => {
         return (
             <SwiperSlide key={v.id} className='howto-swiper-slide'>
-                <div className='howto-list-item'>
+                <div className={`howto-list-item type${i + 1}`}>
+                    <div className={`howto-list-bg type${i + 1}`}></div>
                     <div className='howto-list-txt'>
                         <i>{`${i < 9 ? 0 : ''}${i + 1}`}</i>
                         <h3>{v.title}</h3>

@@ -1,9 +1,19 @@
 import styled from 'styled-components';
 import { mediaQuery } from '../../styles/Variable';
+import howto_tablet_bg1 from '../../assets/images/howto_tablet_bg1.png';
+import howto_tablet_bg2 from '../../assets/images/howto_tablet_bg2.png';
+import howto_tablet_bg3 from '../../assets/images/howto_tablet_bg3.png';
+import howto_tablet_bg4 from '../../assets/images/howto_tablet_bg4.png';
+import howto_tablet_bg5 from '../../assets/images/howto_tablet_bg5.png';
+import howto_mobile_bg1 from '../../assets/images/howto_mobile_bg1.png';
+import howto_mobile_bg2 from '../../assets/images/howto_mobile_bg2.png';
+import howto_mobile_bg3 from '../../assets/images/howto_mobile_bg3.png';
+import howto_mobile_bg4 from '../../assets/images/howto_mobile_bg4.png';
+import howto_mobile_bg5 from '../../assets/images/howto_mobile_bg5.png';
 
 const { mediaTablet, mediaMobile } = mediaQuery;
 
-export const HowtoSlides = styled.section`
+export const HowtoSlides = styled.article`
     .howto-swiper {
         .swiper-scrollbar {
             background: rgba(43, 81, 241, 0.2);
@@ -30,7 +40,7 @@ export const HowtoSlides = styled.section`
     
             &.swiper-slide-visible {
                 opacity: 1 !important;
-                transition-delay: 0.3s;
+                transition-delay: 0.4s;
             }
         }
     }
@@ -53,15 +63,35 @@ export const HowtoSlides = styled.section`
     }
 
     .howto-list-item {
+        position: relative;
         max-width: 1036px;
         padding: 54px;
-        border: 2px solid #f9fafd;
-        border-radius: 16px;
-        background: radial-gradient(229.59% 96.04% at 50% 3.96%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%);
-        backdrop-filter: blur(44px);
+
+        &:before {
+            content: '';
+            display: none;
+            z-index: 1;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(222.01deg, #2B50F1 -28.75%, #7571FF 33.19%);
+        }        
     }
+
+    .howto-list-bg {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: center/100% auto no-repeat;
+    }    
     
     .howto-list-txt {
+        z-index: 3;
+
         i {
             display: block;
             margin-bottom: 20px;
@@ -103,6 +133,40 @@ export const HowtoSlides = styled.section`
         .howto-list-item {
             max-width: 620px;
             height: 320px;
+
+            &.type1:before {
+                display: block;
+                top: -39px;
+                right: 49.5px;
+            }
+
+            &.type2:before {
+                display: block;
+                bottom: 22px;
+                right: -98px;
+            }            
+        }
+        
+        .howto-list-bg {
+            &.type1 {
+                background-image: url(${howto_tablet_bg1});
+            }
+    
+            &.type2 {
+                background-image: url(${howto_tablet_bg2});
+            }
+            
+            &.type3 {
+                background-image: url(${howto_tablet_bg3});
+            }
+            
+            &.type4 {
+                background-image: url(${howto_tablet_bg4});
+            }
+            
+            &.type5 {
+                background-image: url(${howto_tablet_bg5});
+            }
         }
 
         .howto-list-txt {
@@ -138,6 +202,51 @@ export const HowtoSlides = styled.section`
             max-width: 250px;
             height: 320px;
             padding: 22px;
+
+            &:before {
+                width: 130px;
+                height: 130px;
+            }
+
+            &.type1:before {
+                display: block;
+                bottom: 18px;
+                right: -40px;
+            }
+
+            &.type2:before {
+                display: block;
+                bottom: 44px;
+                right: -75px;
+            }
+
+            &.type4:before {
+                display: block;
+                top: 30px;
+                right: -34px;
+            }            
+        }
+
+        .howto-list-bg {
+            &.type1 {
+                background-image: url(${howto_mobile_bg1});
+            }
+    
+            &.type2 {
+                background-image: url(${howto_mobile_bg2});
+            }
+            
+            &.type3 {
+                background-image: url(${howto_mobile_bg3});
+            }
+            
+            &.type4 {
+                background-image: url(${howto_mobile_bg4});
+            }
+            
+            &.type5 {
+                background-image: url(${howto_mobile_bg5});
+            }
         }
 
         .howto-list-txt {

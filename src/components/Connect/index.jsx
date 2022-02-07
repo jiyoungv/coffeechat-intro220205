@@ -20,8 +20,8 @@ const Connect = () => {
                         </h2>
                     </div>
                     <div className='connect-btn-wrap'>
-                        <a href='/' title='Google Play' className='connect-btn'>Google Play</a>
-                        <a href='/' title='App Store' className='connect-btn type-apple'>App Store</a>
+                        <a href='https://coffeechat.onelink.me/XgWl/4dd5f94e' target='_blank' rel='noreferrer' title='Google Play' className='connect-btn'>Google Play</a>
+                        <a href='https://coffeechat.onelink.me/XgWl/4dd5f94e' target='_blank' rel='noreferrer' title='App Store' className='connect-btn type-apple'>App Store</a>
                     </div>
                 </article>
             </Inners>

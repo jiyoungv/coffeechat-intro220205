@@ -6,9 +6,15 @@ import useScroll from '../../hooks/useScroll';
 
 const EventBanner = ({ isMobile }) => {
     const [show, setShow] = useState(true);
+    const [close, setClose] = useState(false);
     const [scrollY] = useScroll();
 
+    const onHide = useCallback(() => {
+        setShow(false);
+    }, []);
+
     const onClose = useCallback(() => {
+        setClose(true);
         setShow(false);
     }, []);
 
@@ -19,8 +25,12 @@ const EventBanner = ({ isMobile }) => {
             } else if (scrollY === 0) {
                 setShow(true);
             }
+        } else {
+            if (!close) {
+                setShow(true);
+            }
         }
-    }, [isMobile, scrollY]);
+    }, [isMobile, scrollY, close]);
 
     return (
         <EventBanners className={show ? 'on' : ''}>
@@ -42,7 +52,7 @@ const EventBanner = ({ isMobile }) => {
                     <button type='button' title='나중에 받기' className='eb-btn2' onClick={onClose}>나중에 받기</button>
                 </div>
             </article>
-            <button type='button' className='eb-close' title='배너 닫기' onClick={onClose}>
+            <button type='button' className='eb-close' title='배너 닫기' onClick={onHide}>
                 <span className='hidden'>배너 닫기</span>
             </button>
         </EventBanners>

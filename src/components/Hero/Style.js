@@ -7,7 +7,7 @@ import hero_bg_mobile from '../../assets/images/hero_bg_mobile.png';
 const { mediaTablet, mediaMobile } = mediaQuery;
 
 export const Heros = styled.section`
-    padding-top: 80px;
+    padding-top: 72px;
     height: 800px;
     background: url(${hero_bg}) center/cover no-repeat;
 
@@ -32,7 +32,6 @@ export const Heros = styled.section`
 
     ${mediaTablet} {
         height: 1074px;
-        padding-top: 72px;
         background-image: url(${hero_bg_tablet});
 
         .hero-txt {

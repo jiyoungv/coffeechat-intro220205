@@ -23,9 +23,10 @@ const howtoData = [
         id: shortid.generate(),
         title: '사전 질문 작성',
         text: `
-            내가 그동안 궁금했던 것이나 
+            내가 그동안 궁금했던 것이나 <br className='none-desktop none-tablet' /> 
             고민을 <br className='none-desktop none-mobile' /> 
-            구체적으로 적어서 파트너에게 전달해 보세요.<br/>
+            구체적으로 적어서 <br className='none-desktop none-tablet' /> 
+            파트너에게 전달해 보세요.<br/>
             파트너는 나의 신상정보를 <br className='none-desktop none-tablet' /> 
             알 수 없으니 안심하세요.
         `,

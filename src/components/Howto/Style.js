@@ -19,18 +19,21 @@ export const Howtos = styled.section`
     .howto-content {
     }
 
-    .howto-ball {
-        position: absolute;
-        top: -88px;
-        right: 103.5px;
-        width: 258px;
-        height: 258px;
-        border-radius: 50%;
-        background: linear-gradient(222.01deg, #2B50F1 -28.75%, #7571FF 33.19%);
-    }
-
     .howto-list {
         position: relative;
+        z-index: 3;
+    }
+
+    .howto-list-wall {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1036px;
+        height: 318px;
+        border: 2px solid #f9fafd;
+        border-radius: 16px;
+        background: radial-gradient(229.59% 96.04% at 50% 3.96%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%);
+        backdrop-filter: blur(44px);
     }
 
     ${mediaTablet} {
@@ -42,13 +45,8 @@ export const Howtos = styled.section`
             }
         }
 
-        .howto-ball {
-            top: auto;
-            right: auto;
-            bottom: 100px;
-            left: 540px;
-            width: 200px;
-            height: 200px;
+        .howto-list-wall {
+            display: none;
         }
     }
 
@@ -63,13 +61,8 @@ export const Howtos = styled.section`
             }
         }
 
-        .howto-ball {
-            top: auto;
-            right: auto;
-            left: 165px;
-            bottom: 54px;
-            width: 130px;
-            height: 130px;
-        }  
+        .howto-list-wall {
+            display: none;
+        }        
     }
 `;

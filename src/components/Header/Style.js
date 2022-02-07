@@ -9,7 +9,7 @@ export const Headers = styled.header`
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 72px;
     transition: background 0.3s, box-shadow 0.3s;
 
     .header-logo {
@@ -24,7 +24,6 @@ export const Headers = styled.header`
     }
 
     ${mediaTablet} {
-        height: 72px;
     }
     
     ${mediaMobile} {
