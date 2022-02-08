@@ -65,9 +65,8 @@ export const Buttons = styled.div`
 
     ${mediaMobile} {
         a, button {
-            padding: 10px 15px;
-            border-radius: 4px;
-            font-size: 16px;
+            padding: 12px 15px;
+            font-size: 14px;
         }
     }
 `;

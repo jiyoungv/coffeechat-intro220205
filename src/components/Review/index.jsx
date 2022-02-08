@@ -14,25 +14,29 @@ const Review = () => {
                         의미있게 변화시키는 커피챗.                        
                     </h2> 
                 </div>
-                <ul className='review-list'>
+                <article className='review-list'>
                     {reviewData.map((review, i) => {
                         return (
-                            <li 
+                            <div 
                                 key={review.id} 
                                 className={`review-list-item ${review.type && `type${review.type}`}`}
                             >
-                                <div className='review-list-chip'>
-                                    <i>{review.company}</i>
+                                <div className='review-list-item-inner'>
+                                    <div className='review-list-chip'>
+                                        <i>{review.company}</i>
+                                    </div>
+                                    <div className='review-list-txt'>
+                                        <h3>{parse(review.title)}</h3>
+                                        <p>{parse(review.text)}</p>
+                                    </div>
+                                    <div className='review-list-foot'>
+                                        <h6>From. {review.nickname} 님</h6>
+                                    </div>
                                 </div>
-                                <div className='review-list-txt'>
-                                    <h3>{parse(review.title)}</h3>
-                                    <p>{review.text}</p>
-                                    <h6>From. {review.nickname} 님</h6>
-                                </div>
-                            </li>
+                            </div>
                         );
                     })}
-                </ul>
+                </article>
                 <Buttons className='review-btn'>
                     <a href='https://www.coffeechat.kr/reviewAll' target='_blank' rel='noreferrer' title='커피챗 실시간 리뷰 더 보러 가기'>커피챗 실시간 리뷰 더 보러 가기</a>
                 </Buttons>
