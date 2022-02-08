@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { mediaQuery, color } from '../../styles/Variable';
 
 const { mediaTablet, mediaMobile } = mediaQuery;
-const { midnight700 } = color;
+const { midnight600 } = color;
 
 export const Intros = styled.section`
     padding: 160px 0;
@@ -12,14 +12,14 @@ export const Intros = styled.section`
 
         h2 {
             margin-bottom: 16px;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 700;
         }
 
         p {
             margin-bottom: 16px;
-            color: ${midnight700};
-            font-size: 24px;
+            color: ${midnight600};
+            font-size: 16px;
 
             &:last-child {
                 margin-bottom: 0;
@@ -27,13 +27,16 @@ export const Intros = styled.section`
         }
     }
 
-    intro-list {
+    .intro-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
     }
 
     @keyframes intro-ani {
         0% {
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(20px);
         }
 
         100% {
@@ -43,23 +46,20 @@ export const Intros = styled.section`
     }
 
     .intro-list-item {
-        display: flex;
-        align-items: center;
         opacity: 0;
-        transform: translateY(50px);        
-        margin-bottom: 10px;
-        padding: 38px;
+        transform: translateY(20px);
+        flex-shrink: 0;
+        width: 258px;
+        height: 153px;
+        padding: 30px 34px;
+        padding-right: 10px;
         border: 2px solid #f9fafd;
         border-radius: 8px;
         background: radial-gradient(229.59% 96.04% at 50% 3.96%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%);
         box-shadow: -22px 44px 88px rgba(221, 221, 221, 0.25);
         backdrop-filter: blur(55px);
-        transition-property: all;
+        transition-property: opacity, transform;
         transition-duration: 0.5s;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
 
         &.on {
             opacity: 1;
@@ -67,15 +67,16 @@ export const Intros = styled.section`
         }
 
         h3 {
-            margin-right: 16px;
+            margin-bottom: 8px;
             color: #2B51F1;
-            font-size: 24px;
+            font-size: 16px;
             font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         p {
-            color: ${midnight700};
-            font-size: 24px;
+            font-size: 16px;
+            letter-spacing: -0.02em;
         }
     }
 
@@ -87,22 +88,39 @@ export const Intros = styled.section`
 
             h2 {
                 margin-bottom: 24px;
-                font-size: 24px;
+                font-size: 20px;
             }
 
             p {
                 margin-bottom: 18px;
-                font-size: 18px;               
+                font-size: 14px;               
             }
         }
 
+        .intro-list {
+            display: block;
+        }
+
         .intro-list-item {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: auto;
+            margin-bottom: 10px;
+            padding: 38px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
             h3 {
-                font-size: 20px;
+                margin-bottom: 0;
+                margin-right: 16px;
+                font-size: 16px;
             }
 
             p {
-                font-size: 20px;
+                font-size: 16px;
             }
         }
     }
@@ -114,27 +132,36 @@ export const Intros = styled.section`
             margin-bottom: 24px;
 
             h2 {
-                margin-bottom: 16px;
+                margin-bottom: 8px;
                 font-size: 16px;              
             }
 
             p {
                 margin-bottom: 8px;
-                font-size: 12px;
+                font-size: 13px;
             }
         }
 
-        .intro-list-item {
+        .intro-list {
             display: block;
+        }        
+
+        .intro-list-item {
+            width: auto;
+            height: auto;
             padding: 22px;
             margin-bottom: 8px;
 
+            &:last-child {
+                margin-bottom: 0;
+            }
+
             h3 {
-                font-size: 12px;
+                font-size: 14px;
             }
 
             p {
-                font-size: 12px;
+                font-size: 14px;
             }
         }        
     }
