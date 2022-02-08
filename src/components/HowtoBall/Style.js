@@ -24,20 +24,14 @@ export const HowtoBalls = styled.article`
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
-        width: calc(258px + 100px);
-        height: calc(258px + 100px);
+        width: calc(258px + 150px);
+        height: calc(258px + 150px);
         border-radius: 50%;
     }
 
     ${mediaTablet} {
-        .howto-ball {
-            display: none;
-        }
     }
 
-    ${mediaMobile} {
-        .howto-ball {
-            display: none;
-        }  
+    ${mediaMobile} { 
     }
 `;

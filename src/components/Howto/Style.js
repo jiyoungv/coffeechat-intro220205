@@ -44,10 +44,6 @@ export const Howtos = styled.section`
                 font-size: 24px;
             }
         }
-
-        .howto-list-wall {
-            display: none;
-        }
     }
 
     ${mediaMobile} {
@@ -59,10 +55,6 @@ export const Howtos = styled.section`
             h2 {
                 font-size: 16px;
             }
-        }
-
-        .howto-list-wall {
-            display: none;
         }        
     }
 `;

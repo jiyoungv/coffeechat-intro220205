@@ -4,13 +4,14 @@ import { HowtoBalls } from './Style';
 const Howto = () => {
     const rangeRef = useRef(null);
     const ballRef = useRef(null);
-    const [enterCoord, setEnterCoord] = useState({ x: 0, y: 0 });
-    const [moveCoord, setMoveCoord] = useState({ x: 0, y: 0 });
-    const [saveCoord, setSaveCoord] = useState({ x: 0, y: 0 });
-    const [distCoord, setDistCoord] = useState({ x: 0, y: 0 });
+
+    const [startCoord, setStartCoord] = useState({ x: 0, y: 0 }); // 마우스 시작 좌표
+    const [moveCoord, setMoveCoord] = useState({ x: 0, y: 0 }); // 마우스 현재 좌표
+    const [distCoord, setDistCoord] = useState({ x: 0, y: 0 }); // 마우스 이동 거리 좌표
+    const [transCoord, setTransCoord] = useState({ x: 0, y: 0 }); // 공이 이동할 좌표
 
     const onMouseEnter = useCallback((e) => {
-        setEnterCoord({ 
+        setStartCoord({ 
             x: e.clientX, 
             y: e.clientY 
         });
@@ -21,31 +22,28 @@ const Howto = () => {
             x: e.clientX, 
             y: e.clientY 
         });
-
-        setSaveCoord({ 
-            x: moveCoord.x - enterCoord.x, 
-            y: moveCoord.y - enterCoord.y 
+        setDistCoord({ 
+            x: moveCoord.x - startCoord.x, 
+            y: moveCoord.y - startCoord.y 
         });
 
         const ballPosTop = 88;
         const diff = (rangeRef.current.offsetHeight / 2 - ballRef.current.offsetHeight / 2) + ballPosTop;
 
-        if (saveCoord.y < 0) {
-            setDistCoord({ 
-                x: moveCoord.x - enterCoord.x, 
-                y: -((enterCoord.y - moveCoord.y) - diff),
-            });            
+        if (distCoord.y < 0) {
+            setTransCoord({ 
+                x: moveCoord.x - startCoord.x, 
+                y: -((startCoord.y - moveCoord.y) - diff),
+            });
         } else {
-            setDistCoord({ 
-                x: moveCoord.x - enterCoord.x, 
-                y: moveCoord.y - enterCoord.y,
+            setTransCoord({ 
+                x: moveCoord.x - startCoord.x, 
+                y: moveCoord.y - startCoord.y,
             });
         }
 
-        ballRef.current.style.transform = `translate(${distCoord.x}px, ${distCoord.y}px)`;
-
-        // console.log(distCoord.x, distCoord.y)
-    }, [enterCoord, moveCoord, saveCoord, distCoord]);
+        ballRef.current.style.transform = `translate(${transCoord.x}px, ${transCoord.y}px)`;
+    }, [startCoord, moveCoord, distCoord, transCoord]);
 
     const onMouseOut = useCallback((e) => {
         ballRef.current.style.transform = 'translate(0, 0)';
@@ -54,7 +52,13 @@ const Howto = () => {
     return (
         <HowtoBalls>
             <div className='howto-ball' ref={ballRef}></div>
-            <div className='howto-range' ref={rangeRef} onMouseMove={onMouseMove} onMouseEnter={onMouseEnter} onMouseOut={onMouseOut}></div>
+            <div 
+                className='howto-range' 
+                ref={rangeRef} 
+                onMouseEnter={onMouseEnter}
+                onMouseMove={onMouseMove}
+                onMouseOut={onMouseOut}
+            ></div>
         </HowtoBalls>
     );
 };
