@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useMemo } from 'react';
 import { HowtoBalls } from './Style';
 
 const Howto = () => {
@@ -41,17 +41,20 @@ const Howto = () => {
                 y: moveCoord.y - startCoord.y,
             });
         }
-
-        ballRef.current.style.transform = `translate(${transCoord.x}px, ${transCoord.y}px)`;
-    }, [startCoord, moveCoord, distCoord, transCoord]);
+    }, [startCoord, moveCoord, distCoord]);
 
     const onMouseOut = useCallback((e) => {
-        ballRef.current.style.transform = 'translate(0, 0)';
+        setTransCoord({ x: 0, y: 0 });
     }, []);
+
+    const style = useMemo(() => ({
+        WebkitTransform: `translate3d(${transCoord.x}px, ${transCoord.y}px, 0)`,
+        transform: `translate3d(${transCoord.x}px, ${transCoord.y}px, 0)`,
+    }), [transCoord]);
 
     return (
         <HowtoBalls>
-            <div className='howto-ball' ref={ballRef}></div>
+            <div className='howto-ball' ref={ballRef} style={style}></div>
             <div 
                 className='howto-range' 
                 ref={rangeRef} 

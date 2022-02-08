@@ -11,11 +11,16 @@ export const HowtoBalls = styled.article`
     .howto-ball {
         position: relative;
         z-index: 1;
+        transform-style: preserve-3d;
+        transform: translate3d(0, 0, 0);
         width: 258px;
         height: 258px;
         border-radius: 50%;
         background: linear-gradient(222.01deg, #2B50F1 -28.75%, #7571FF 33.19%);
-        transition: all 0.2s;
+        transition-property: transform;
+        transition-duration: 0.2s;
+        backface-visibility: hidden;
+        will-change: transform;
     }
 
     .howto-range {
