@@ -4,14 +4,14 @@ import { mediaQuery } from '../../styles/Variable';
 const { mediaTablet, mediaMobile } = mediaQuery;
 
 export const Howtos = styled.section`
-    padding: 238px 0;
+    padding: 160px 0;
     overflow: hidden;
 
     .howto-tit {
         margin-bottom: 40px;
 
         h2 {
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 700;
         }
     }
@@ -29,7 +29,7 @@ export const Howtos = styled.section`
         top: 0;
         left: 0;
         width: 1036px;
-        height: 318px;
+        height: 100%;
         border: 2px solid #f9fafd;
         border-radius: 16px;
         background: radial-gradient(229.59% 96.04% at 50% 3.96%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%, rgba(255, 255, 255, 0.308) 100%);
@@ -47,7 +47,7 @@ export const Howtos = styled.section`
     }
 
     ${mediaMobile} {
-        padding: 56px 0;
+        padding: 56px 0 47px;
 
         .howto-tit {
             margin-bottom: 24px;

@@ -18,27 +18,27 @@ export const Shorts = styled.section`
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        width: 120px;
-        height: 120px;
+        width: 60px;
+        height: 60px;
         margin-right: 40px;
-        border-radius: 24px;
-        box-shadow: -22px 44px 88px rgba(221, 221, 221, 0.25);
+        border-radius: 12px;
+        box-shadow: -11.0426px 22.0852px 44.1704px rgba(221, 221, 221, 0.25);
         background: #fff;
 
         figure {
-            max-width: 63px;
+            max-width: 31.6px;
         }
     }
 
     .short-txt {
         h2 {
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 700;
         }
     }
 
     ${mediaTablet} {
-        padding: 70px 0;
+        padding: 45px 0;
 
         .short-content {
             display: block;
@@ -46,22 +46,14 @@ export const Shorts = styled.section`
 
         .short-img {
             display: flex;
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 30px;
-            border-radius: 17.53px;
-            box-shadow: -16.0716px 32.1433px 64.2866px rgba(221, 221, 221, 0.25);
-
-            figure {
-                max-width: 46px;
-            }
+            margin: 0 auto 24px;
         }
 
         .short-txt {
             text-align: center;
 
             h2 {
-                font-size: 24px;
+                font-size: 20px;
             }
         }
     }
@@ -90,7 +82,7 @@ export const Shorts = styled.section`
             text-align: center;
 
             h2 {
-                font-size: 16px;
+                font-size: 18px;
             }
         }        
     }

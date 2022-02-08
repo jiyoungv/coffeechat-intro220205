@@ -5,15 +5,15 @@ import eb_close from '../../assets/images/eb_close.png';
 
 const { mediaDesktop, mediaTablet, mediaMobile } = mediaQuery;
 
-export const EventBanners = styled.section`
-    z-index: 10;
+export const EventBanners = styled.article`
+    z-index: 99;
     opacity: 0;
     visibility: hidden;
     position: fixed;
     bottom: 30px;
     right: 30px;
     width: 589px;
-    height: 212px;      
+    height: 212px;
     padding: 32px;    
     border-radius: 8px;
     background: #000;
@@ -83,8 +83,13 @@ export const EventBanners = styled.section`
     }
 
     ${mediaTablet} {
-        top: auto;
         bottom: 20px;
+        right: 20px;
+        height: 223px;
+
+        .eb-btn {
+            padding: 12.5px 15px;
+        }
     }
 
     ${mediaMobile} {
@@ -111,7 +116,7 @@ export const EventBanners = styled.section`
 
         .eb-img {
             position: static;
-            max-width: 175px;
+            max-width: 175.2px;
             margin: 0 auto;
         }
 
@@ -119,11 +124,17 @@ export const EventBanners = styled.section`
             text-align: center;
         }
 
+        .eb-btn {
+            margin-top: 16px;
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+
         .eb-btn2 {
             display: inline-block;
-            margin-top: 16px;
+            margin-top: 24px;
             color: #fff;
-            font-size: 11px;
+            font-size: 13px;
             text-decoration-line: underline;
         }
 

@@ -25,12 +25,11 @@ export const Inners = styled.div`
 
 export const Buttons = styled.div`
     a, button {
-        min-width: 200px;
         display: inline-block;
-        padding: 14px 23px;
+        padding: 7px 15px;
         border: 1px solid ${midnight700};
-        border-radius: 8px;
-        font-size: 16px;
+        border-radius: 4px;
+        font-size: 13px;
         font-weight: 700;
         letter-spacing: -0.02em;
         text-align: center;
@@ -59,14 +58,16 @@ export const Buttons = styled.div`
     } 
 
     ${mediaTablet} {
+        a, button {
+            padding: 12.5px 15px;
+        }
     }
 
     ${mediaMobile} {
         a, button {
-            min-width: 0;
-            padding: 12.5px 15px;
+            padding: 10px 15px;
             border-radius: 4px;
-            font-size: 13px;
+            font-size: 16px;
         }
     }
 `;

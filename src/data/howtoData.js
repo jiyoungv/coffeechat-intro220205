@@ -43,7 +43,8 @@ const howtoData = [
         id: shortid.generate(),
         title: '커피챗 진행',
         text: `
-            커피챗 앱에서 예약시간 30분 전부터 입장할 수 있어요. <br/>
+            커피챗 앱에서 예약시간 30분 <br className='none-desktop none-tablet' />
+            전부터 입장할 수 있어요. <br/>
             밀도 높은 20분 대화, <br className='none-desktop none-tablet' />
             1:1 커피챗을 경험해 보세요.    
         `,

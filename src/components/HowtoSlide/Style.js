@@ -26,11 +26,12 @@ export const HowtoSlides = styled.article`
     }
 
     .howto-swiper-desktop {
-        max-height: 318px;
+        max-height: 262px;
 
         .swiper-scrollbar {
-            top: 60px;
+            top: 50%;
             right: 0;
+            transform: translateY(-50%);
             width: 4px;
             height: 200px;
         }        
@@ -65,9 +66,10 @@ export const HowtoSlides = styled.article`
     .howto-list-item {
         position: relative;
         max-width: 1036px;
-        padding: 54px;
+        height: 100%;
+        padding: 56px;
 
-        &:before {
+        &:before { // 태블릿, 모바일에서 사용
             content: '';
             display: none;
             z-index: 1;
@@ -76,7 +78,7 @@ export const HowtoSlides = styled.article`
             height: 200px;
             border-radius: 50%;
             background: linear-gradient(222.01deg, #2B50F1 -28.75%, #7571FF 33.19%);
-        }        
+        }
     }
 
     .howto-list-bg {
@@ -96,19 +98,19 @@ export const HowtoSlides = styled.article`
             display: block;
             margin-bottom: 20px;
             color: #2B51F1;
-            font-size: 40px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 800;
         }
 
         h3 {
             margin-bottom: 8px;
             color: #2B51F1;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
         }
 
         p {
-            font-size: 24px;
+            font-size: 16px;
         }
     }
 
@@ -127,24 +129,30 @@ export const HowtoSlides = styled.article`
             visibility: visible;
             position: static;
             width: 620px;
-            height: calc(320px + 42px);
+            height: calc(273px + 40px);
         }
         
         .howto-list-item {
             max-width: 620px;
-            height: 320px;
+            height: 273px;
 
             &.type1:before {
                 display: block;
                 top: -39px;
-                right: 49.5px;
+                right: 49.44px;
             }
 
             &.type2:before {
                 display: block;
-                bottom: 22px;
-                right: -98px;
-            }            
+                bottom: -25.17px;
+                right: -98.26px;
+            }
+            
+            &.type5:before {
+                display: block;
+                bottom: -16.5px;
+                right: 51.06px;
+            }
         }
         
         .howto-list-bg {
@@ -175,7 +183,7 @@ export const HowtoSlides = styled.article`
             }
 
             p {
-                font-size: 18px;
+                font-size: 14px;
             }
         }
     }
@@ -195,7 +203,7 @@ export const HowtoSlides = styled.article`
             visibility: visible;
             position: static;
             width: 250px;
-            height: calc(320px + 24px);
+            height: calc(320px + 26px);
         }
 
         .howto-list-item {

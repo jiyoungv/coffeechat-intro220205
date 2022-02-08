@@ -5,7 +5,7 @@ const { mediaTablet, mediaMobile } = mediaQuery;
 const { bg } = color;
 
 export const Faqs = styled.section`
-    padding: 122px 0;
+    padding: 101px 0;
     background: ${bg};
 
     .faq-content {
@@ -16,24 +16,24 @@ export const Faqs = styled.section`
 
     .faq-txt {
         h2 {
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 700;
         }
     }
 
     ${mediaTablet} {
-        padding: 87px 0;
+        padding: 68px 0;
 
         .faq-content {
             display: block;
         }
 
         .faq-txt {
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             text-align: center;
 
             h2 {
-                font-size: 24px;
+                font-size: 20px;
             }
         }
 
@@ -54,7 +54,7 @@ export const Faqs = styled.section`
             text-align: center;
 
             h2 {
-                font-size: 16px;
+                font-size: 18px;
             }
         }
 

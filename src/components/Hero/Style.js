@@ -39,6 +39,10 @@ export const Heros = styled.section`
 
             h1 {
                 margin-bottom: 40px;
+
+                &.type2 {
+                    text-align: left;
+                }
             }
         }
     }
@@ -54,10 +58,14 @@ export const Heros = styled.section`
             h1 {
                 margin-bottom: 40px;
                 font-size: 20px;
+
+                &.type2 {
+                    text-align: left;
+                }
             }
 
             h3 {
-                font-size: 12px;
+                font-size: 13px;
             }
         }
     }

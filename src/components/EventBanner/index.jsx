@@ -37,7 +37,8 @@ const EventBanner = ({ isMobile }) => {
             <article className='eb-content'>
                 <div className='eb-txt'>
                     <h3>
-                        전 세계 25개국 이상 다양한 <br/>
+                        전 세계 25개국 이상 <br className='none-mobile'/>
+                        다양한 <br className='none-desktop none-tablet'/>
                         커리어의 파트너와 자유로운 1:1 커피챗 <br/>
                         신규 가입하면 <strong>누구나 첫 커피챗 무료</strong>
                     </h3>

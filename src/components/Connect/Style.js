@@ -17,7 +17,7 @@ export const Connects = styled.section`
 
         h2 {
             color: #fff;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 700;
         }
     }
@@ -32,23 +32,23 @@ export const Connects = styled.section`
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        min-width: 250px;
+        min-width: 177px;
         margin: 0 16px;
         padding: 15px 0;
         border: 1px solid #fff;
         border-radius: 8px;
         color: #fff;
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 700;
         text-align: center;
         
         &::before {
             content: '';
             display: block;
-            width: 22px;
-            height: 24px;
+            width: 13px;
+            height: 16px;
             margin-right: 8px;
-            background: url(${connect_google}) center/auto 100% no-repeat;
+            background: url(${connect_google}) center/100% auto no-repeat;
         }
 
         &.type-apple {
@@ -73,7 +73,7 @@ export const Connects = styled.section`
         padding: 80px 0;
 
         .connect-txt {
-            margin-bottom: 100px;
+            margin-bottom: 40px;
 
             h2 {
                 font-size: 20px;
@@ -81,9 +81,6 @@ export const Connects = styled.section`
         }
 
         .connect-btn {
-            min-width: 170px;
-            margin: 0 8px;
-            font-size: 16px;
         }
     }
 
@@ -95,21 +92,19 @@ export const Connects = styled.section`
 
             h2 {
                 font-size: 14px;
-                font-weight: 400;
             }
         }
 
         .connect-btn {
-            min-width: 0;
+            min-width: 131.5px;
             margin: 0 4px;
-            padding: 12px 16px;
+            padding: 12px 0;
             border-radius: 4px;
             font-size: 14px;
 
             &::before {
                 width: 16px;
                 height: 19px;
-                background-size: 100% auto;
             }
         }        
     }

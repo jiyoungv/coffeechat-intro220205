@@ -11,7 +11,7 @@ const Faq = () => {
                         <h2>커피챗이 더 궁금하다면?</h2>
                     </div>
                     <Buttons className='faq-btn'>
-                        <a href='https://www.coffeechat.kr/faq' target='_blank' rel='noreferrer' title='자주묻는 질문'>자주묻는 질문</a>
+                        <a href='https://www.coffeechat.kr/faq' target='_blank' rel='noreferrer' title='자주 묻는 질문'>자주 묻는 질문</a>
                     </Buttons>                    
                 </article>
             </Inners>
