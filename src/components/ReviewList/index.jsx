@@ -35,7 +35,7 @@ const Review = () => {
     const reviewSwiperList = useMemo(() => reviewData.map((v, i) => {
         return (
             <SwiperSlide key={v.id} className='review-swiper-slide'>
-                <div className={`review-list-item ${v.type && `type${v.type}`} ${`trans-delay${i + 1}`} ${on ? 'on' : ''}`}>
+                <div className={`review-list-item ${v.type ? `type${v.type}` : ''} ${`trans-delay${i + 1}`} ${on ? 'on' : ''}`}>
                     <div className='review-list-item-inner'>
                         <div className='review-list-chip'>
                             <i>{v.company}</i>
@@ -77,7 +77,7 @@ const Review = () => {
             {isDesktop 
                 ? <Swiper
                     slidesPerView={3}
-                    spaceBetween={16}
+                    spaceBetween={12}
                     className='review-swiper'
                     ref={scrollRef}
                 >

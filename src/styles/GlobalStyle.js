@@ -23,7 +23,7 @@ function transDelay(length, duration) {
   
 const GlobalStyle = createGlobalStyle`
 	${reset}
-	${transDelay(5, 0.3)};
+	${transDelay(11, 0.3)};
 	
 	* {
 		box-sizing: border-box;

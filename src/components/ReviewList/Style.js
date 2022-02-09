@@ -23,7 +23,7 @@ export const ReviewLists = styled.article`
         position: relative;
         width: 350px;
         height: 500px;
-        padding: 39px 48px;
+        padding: 31px;
         border: 1px solid #2B51F1;
         border-radius: 16px;
         transition-property: opacity, transform;
@@ -32,10 +32,6 @@ export const ReviewLists = styled.article`
         &.on {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        &.type1 {
-            filter: drop-shadow(-22px 44px 88px #DDDDDD) drop-shadow(-22px 44px 88px #DDDDDD);
         }
 
         &.type2 {
