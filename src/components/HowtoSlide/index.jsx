@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import parse from 'html-react-parser';
+import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade } from 'swiper';
 import "swiper/css";
@@ -10,7 +11,7 @@ import { HowtoSlides } from './Style';
 import howtoData from '../../data/howtoData';
 import { IsMobile } from '../../utils/mediaQuery';
 
-const HowtoSlide = () => {
+const HowtoSlide = ({ setSlide }) => {
     const howtoList = useMemo(() => howtoData.map((v, i) => {
         return (
             <SwiperSlide key={v.id} className='howto-swiper-slide'>
@@ -35,6 +36,7 @@ const HowtoSlide = () => {
                 scrollbar={true}
                 mousewheel={true}
                 modules={[EffectFade, Scrollbar, Mousewheel]}
+                onSlideChange={(s) => setSlide(s.activeIndex)}
                 className='howto-swiper howto-swiper-desktop'
             >
                 {howtoList}
@@ -53,6 +55,10 @@ const HowtoSlide = () => {
             </Swiper>
         </HowtoSlides>
     );
+};
+
+HowtoSlide.propTypes ={
+    setSlide: PropTypes.func,
 };
 
 export default HowtoSlide;

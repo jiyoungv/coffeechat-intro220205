@@ -5,16 +5,18 @@ const { mediaTablet, mediaMobile } = mediaQuery;
 
 export const HowtoBalls = styled.article`
     position: absolute;
-    top: -88px;
-    right: 103.5px;
+    top: -78px;
+    right: 108px;
+    transition-property: transform;
+    transition-duration: 0.2s;
 
     .howto-ball {
         position: relative;
         z-index: 1;
         transform-style: preserve-3d;
         transform: translate3d(0, 0, 0);
-        width: 258px;
-        height: 258px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         background: linear-gradient(222.01deg, #2B50F1 -28.75%, #7571FF 33.19%);
         transition-property: transform;
@@ -29,8 +31,8 @@ export const HowtoBalls = styled.article`
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
-        width: calc(258px + 150px);
-        height: calc(258px + 150px);
+        width: calc(200px + 150px);
+        height: calc(200px + 150px);
         border-radius: 50%;
     }
 
