@@ -8,7 +8,7 @@ export const HowtoBalls = styled.article`
     top: -78px;
     right: 108px;
     transition-property: transform;
-    transition-duration: 0.2s;
+    transition-duration: 0.6s;
 
     .howto-ball {
         position: relative;
