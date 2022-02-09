@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
 import { Inners } from '../../styles/Common';
 import { Intros } from './Style';
 import useScroll from '../../hooks/useScroll';
+import { IsDesktop } from '../../utils/mediaQuery';
 
-const Intro = ({ isDesktop }) => {
+const Intro = () => {
+    const isDesktop = IsDesktop();
     const [scrollY] = useScroll();
     const scrollDesktopRef = useRef(null); // 스크롤 기준 요소 (Desktop)
     const scrollMobileRef = useRef(null); // 스크롤 기준 요소 (Tablet, Mobile)
@@ -83,10 +84,6 @@ const Intro = ({ isDesktop }) => {
             </Inners>
         </Intros>
     );
-};
-
-Intro.propTypes = {
-    isDesktop: PropTypes.bool,
 };
 
 export default Intro;

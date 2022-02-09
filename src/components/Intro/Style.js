@@ -33,21 +33,9 @@ export const Intros = styled.section`
         align-items: center;        
     }
 
-    @keyframes intro-ani {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
     .intro-list-item {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
         flex-shrink: 0;
         width: 258px;
         height: 153px;

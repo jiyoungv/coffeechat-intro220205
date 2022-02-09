@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import parse from 'html-react-parser';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade } from 'swiper';
@@ -11,7 +11,7 @@ import howtoData from '../../data/howtoData';
 import { IsMobile } from '../../utils/mediaQuery';
 
 const HowtoSlide = () => {
-    const howtoList = howtoData.map((v, i) => {
+    const howtoList = useMemo(() => howtoData.map((v, i) => {
         return (
             <SwiperSlide key={v.id} className='howto-swiper-slide'>
                 <div className={`howto-list-item type${i + 1}`}>
@@ -24,7 +24,7 @@ const HowtoSlide = () => {
                 </div>
             </SwiperSlide>
         );
-    });
+    }), []);
 
     return (
         <HowtoSlides>

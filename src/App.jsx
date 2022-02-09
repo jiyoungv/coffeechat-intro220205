@@ -9,7 +9,6 @@ import Review from './components/Review';
 import Faq from './components/Faq';
 import Howto from './components/Howto';
 import Connect from './components/Connect';
-import { IsDesktop } from './utils/mediaQuery';
 
 const App = () => {
 	return (
@@ -18,7 +17,7 @@ const App = () => {
 			<Header />
 			<Hero />
 			<Short />
-			<Intro isDesktop={IsDesktop()} />
+			<Intro/>
 			<Benefit />
 			<Review />
 			<Faq />

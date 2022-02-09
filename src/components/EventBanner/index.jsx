@@ -1,10 +1,11 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { EventBanners } from './Style';
 import eb_coupon from '../../assets/images/eb_coupon.png';
 import useScroll from '../../hooks/useScroll';
+import { IsMobile } from '../../utils/mediaQuery';
 
-const EventBanner = ({ isMobile }) => {
+const EventBanner = () => {
+    const isMobile = IsMobile();
     const [show, setShow] = useState(true);
     const [close, setClose] = useState(false);
     const [scrollY] = useScroll();
@@ -58,10 +59,6 @@ const EventBanner = ({ isMobile }) => {
             </button>
         </EventBanners>
     );
-};
-
-EventBanner.propTypes = {
-    isMobile: PropTypes.bool,
 };
 
 export default EventBanner;
